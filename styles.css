@@ -1,0 +1,56 @@
+:root {
+    --etch-a-sketch-grey: #bcbcbc;
+    --etch-a-sketch-red: #D60A21;
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+banner {
+    background-image: linear-gradient(to top, #bcbcbc, #bcbcbc00);
+    width: 100%;
+    padding-bottom: 1.5em;
+    border-bottom: 2px solid rgb(151, 3, 3);
+    display: flex;
+    justify-content: center;
+}
+
+banner > h1 {
+    
+    padding: 2px 8px;
+    width: fit-content;
+    background-color: var(--etch-a-sketch-red);
+    color: var(--etch-a-sketch-grey);
+    text-shadow: 1px 1px black;
+    border-radius: 15px;
+    
+}
+
+#sketch-box {
+    display: grid;
+    /* adjust the grid-template-columns values in js; */
+    grid-template-columns: repeat(16, 1fr);
+    /* grid-auto-rows: auto; */
+    /* grid-auto-columns: auto; */
+    border: 4rem solid var(--etch-a-sketch-red);
+    border-bottom: 6rem solid var(--etch-a-sketch-red);
+    /* box-shadow: inset 10px 10px black; light highlights TODO*/
+    border-radius: 2rem;
+    width: 400px;
+    height: 400px;
+}
+
+#sketch-box > div {
+    /* padding: minmax; */
+    background-color: var(--etch-a-sketch-grey);
+    text-align: center;
+    border: 1px solid black;
+}
