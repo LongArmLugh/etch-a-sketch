@@ -1,13 +1,32 @@
 :root {
+    height: 100%;
     --etch-a-sketch-grey: #bcbcbc;
     --etch-a-sketch-red: #D60A21;
+    --etch-a-setch-complimentary: #0AD6BF;
+    --complimentary-light: #ACFFF6;
 }
 
 body {
+    background-color: rgba(0, 0, 0, 0.486);
     margin: 0;
+    padding: 0;
+    height: 100%; 
+}
+
+sup {
+    font-size: x-small;
+}
+
+button {
+    border: none;
+    /* text-decoration: none; */
+}
+button:active {
+    transform: translateY(3px);
 }
 
 #main {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,26 +34,41 @@ body {
 }
 
 banner {
+    height: 6rem;
+    background-color: white;
     background-image: linear-gradient(to top, #bcbcbc, #bcbcbc00);
     width: 100%;
-    padding-bottom: 1.5em;
-    border-bottom: 2px solid rgb(151, 3, 3);
+    border-bottom: 2px solid var(--etch-a-sketch-red);
     display: flex;
     justify-content: center;
 }
 
 banner > h1 {
-    
-    padding: 2px 8px;
+    padding: 4px 9px;
+    align-self: center;
     width: fit-content;
     background-color: var(--etch-a-sketch-red);
     color: var(--etch-a-sketch-grey);
-    text-shadow: 1px 1px black;
-    border-radius: 15px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.45);
     
 }
 
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding-top: rem;
+    padding-bottom: 0.5rem;
+    height: 1rem;
+    border-top: 1px solid var(--etch-a-sketch-red);
+    background-image: linear-gradient(to bottom, #bcbcbc, #bcbcbc00);
+    text-align: center;
+}
+
 #sketch-box {
+    background-color: white;
     display: grid;
     /* adjust the grid-template-columns values in js; */
     grid-template-columns: repeat(16, 1fr);
@@ -42,7 +76,7 @@ banner > h1 {
     /* grid-auto-columns: auto; */
     border: 4rem solid var(--etch-a-sketch-red);
     border-bottom: 6rem solid var(--etch-a-sketch-red);
-    /* box-shadow: inset 10px 10px black; light highlights TODO*/
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.30); /*light highlights TODO */
     border-radius: 2rem;
     width: 400px;
     height: 400px;
@@ -50,7 +84,34 @@ banner > h1 {
 
 #sketch-box > div {
     /* padding: minmax; */
-    background-color: var(--etch-a-sketch-grey);
-    text-align: center;
-    border: 1px solid black;
+    background-color: var(--etch-a-sketch-grey); 
+    /* border: 1px solid black; */
+}
+
+#sketch-box > div:hover {
+    background-color: black;
+}
+
+#btn-wrap {
+    display: flex;
+    gap: 145px
+}
+
+#reset-btn {
+    align-items: flex-start;
+    position: relative;
+    top: -6em;
+    height: 1.5rem;
+    width: 4rem;
+    /* padding: 0.5rem 1rem; */
+    border-radius: 10px;
+}
+
+.knob {
+    position: relative;
+    top: -6.5em;
+    border-radius: 100%;
+    background-color: white;
+    height: 3rem;
+    width: 3rem;
 }
